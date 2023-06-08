@@ -4,3 +4,5 @@ services:
     build:
     ports:
       -80:80
+    tty: true
+    network_mode: bridge
