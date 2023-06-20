@@ -1,1 +1,1 @@
-{"virtualbox":{"/home/vagrant/LAMP-Stack":{"create":"true","type":"virtualbox","guestpath":"/home/vagrant/LAMP-Stack","hostpath":"C:/Users/Ansh/Desktop/College/BITS/PS-1/LAMP-Stack","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Ansh/Desktop/College/BITS/PS-1/LAMP-Stack","disabled":false,"__vagrantfile":true}}}
