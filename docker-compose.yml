@@ -1,5 +1,7 @@
 version: '3'
 services:
+  run:
+    RUN: docker-php-ext-install mysqli && docker-php-ext-enable mysqli
   db:
     image: mysql:latest
     environment: 
@@ -36,4 +38,3 @@ services:
 networks:
   lamp-network:
     driver: bridge
-RUN: docker-php-ext-install mysqli && docker-php-ext-enable mysqli
