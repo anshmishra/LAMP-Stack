@@ -6,6 +6,7 @@ services:
       MYSQL_DATABASE: lamp_stack
       MYSQL_USER: user1
       MYSQL_PASSWORD: password
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
   www:
     image: php:apache-bullseye
     volumes:
