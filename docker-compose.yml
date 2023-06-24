@@ -22,10 +22,6 @@ services:
       - 443:443
     networks:
       - lamp-network
-    command:
-      bash -c "
-        docker-php-ext-install mysqli &&
-        docker-php-ext-enable mysqli"
   phpmyadmin:
     depends_on:
        - db
