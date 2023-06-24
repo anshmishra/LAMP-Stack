@@ -23,3 +23,6 @@ services:
     environment:
       - PMA_HOST=db
       - PMA_PORT=3306
+  networks:
+    lamp_network:
+      driver: bridge
