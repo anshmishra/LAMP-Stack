@@ -1,7 +1,5 @@
 version: '3'
 services:
-  RUN: 
-    command: docker-php-ext-install mysqli && docker-php-ext-enable mysqli
   db:
     image: mysql:latest
     environment: 
@@ -16,7 +14,7 @@ services:
   www:
     depends_on:
       - db
-    image: php:8.1-apache-bullseye
+    image: php:latest
     volumes:
       - "./:/var/www/html"
     ports: 
@@ -24,6 +22,11 @@ services:
       - 443:443
     networks:
       - lamp-network
+    commands:
+      bash -c "
+        docker-php-ext-install mysqli &&
+        docker-php-ext-enable mysqli &&
+        apache2-foreground"
   phpmyadmin:
     depends_on:
        - db
