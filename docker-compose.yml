@@ -36,4 +36,4 @@ services:
 networks:
   lamp-network:
     driver: bridge
-RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+RUN: docker-php-ext-install mysqli && docker-php-ext-enable mysqli
