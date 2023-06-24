@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect(
+$connect = new mysqli(
     'db',
     'user1',
     'password',
