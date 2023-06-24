@@ -12,6 +12,9 @@ services:
     networks:
       - lamp-network
   www:
+    build:
+      context: .
+      dockerfile: Dockerfile
     depends_on:
       - db
     image: php:apache
