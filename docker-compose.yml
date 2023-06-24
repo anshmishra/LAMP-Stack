@@ -1,6 +1,7 @@
 version: '3'
 services:
-  RUN: docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+  RUN: 
+    command: docker-php-ext-install mysqli && docker-php-ext-enable mysqli
   db:
     image: mysql:latest
     environment: 
