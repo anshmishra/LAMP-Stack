@@ -10,7 +10,7 @@ services:
     volumes:
       - "./db:/docker-entrypoint-initdb.d"
     networks:
-      - lamp_network
+      - lamp-network
   www:
     depends_on:
       - db
@@ -21,7 +21,7 @@ services:
       - 80:80
       - 443:443
     networks:
-      - lamp_network
+      - lamp-network
   phpmyadmin:
     depends_on:
        - db
@@ -32,7 +32,7 @@ services:
       - PMA_HOST=db
       - PMA_PORT=3306
     networks:
-      - lamp_network
-  networks:
-    lamp_network:
-      driver: bridge
+      - lamp-network
+networks:
+  lamp-network:
+    driver: bridge
