@@ -12,6 +12,8 @@ services:
     networks:
       - lamp_network
   www:
+    depends:
+      - db
     image: php:8.1.1-apache
     volumes:
       - "./:/var/www/html"
@@ -21,6 +23,8 @@ services:
     networks:
       - lamp_network
   phpmyadmin:
+    depends:
+       - db
     image: phpmyadmin/phpmyadmin
     ports:
       - 8001:80
