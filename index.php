@@ -18,3 +18,4 @@ while($record = mysqli_fetch_assoc($result))
     echo 'Posted: '.$record['Date'];
     echo'<hr>';
 }
+?>
