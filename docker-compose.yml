@@ -14,7 +14,7 @@ services:
   www:
     depends_on:
       - db
-    image: php:latest
+    image: php:apache
     volumes:
       - "./:/var/www/html"
     ports: 
