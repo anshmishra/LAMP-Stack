@@ -17,7 +17,7 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - db
-    image: php:apache
+    image: php:apache-bullseye
     volumes:
       - "./:/var/www/html"
     ports: 
