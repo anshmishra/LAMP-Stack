@@ -22,7 +22,7 @@ services:
       - 443:443
     networks:
       - lamp-network
-    commands:
+    command:
       bash -c "
         docker-php-ext-install mysqli &&
         docker-php-ext-enable mysqli &&
