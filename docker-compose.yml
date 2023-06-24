@@ -1,5 +1,11 @@
 version: '3'
 services:
+  db:
+    image: mysql:latest
+    environment: 
+      MYSQL_DATABASE: lamp_stack
+      MYSQL_USER: user1
+      MYSQL_PASSWORD: password
   www:
     image: php:apache-bullseye
     volumes:
