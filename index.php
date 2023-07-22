@@ -7,7 +7,7 @@ $conn = mysqli_connect(
     'lamp_stack'
 );
 
-$query = 'SELECT * FROM table';
+$query = 'SELECT * FROM Table';
 $result - mysqli_query($connect, $query);
 
 echo '<h1>MySQL Content,</h1>';
