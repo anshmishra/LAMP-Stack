@@ -8,7 +8,7 @@ $conn = mysqli_connect(
 );
 
 $query = 'SELECT * FROM Table';
-$result - mysqli_query($connect, $query);
+$result - mysqli_query( $query);
 
 echo '<h1>MySQL Content,</h1>';
 
