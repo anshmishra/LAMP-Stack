@@ -1,7 +1,7 @@
 <?php
 
 $servername = "db";
-$username = "user";
+$username = "user1";
 $password = "password";
 $dbname = "lamp_stack";
 
