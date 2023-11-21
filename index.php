@@ -1,22 +1,33 @@
-
 <?php
-$conn = mysqli_connect(
-    'db',
-    'user1',
-    'password',
-    'lamp_stack'
-);
 
-$query = 'SELECT * FROM Table';
-$result - mysqli_query( $query);
+$servername = "db";
+$username = "user";
+$password = "password";
+$dbname = "lamp_stack";
 
-echo '<h1>MySQL Content,</h1>';
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-while($record = mysqli_fetch_assoc($result))
-{
-    echo'<h2>'.$record['Title'].'</h2>';
-    echo'<p>'.$record['Body'].'</p>';
-    echo 'Posted: '.$record['Date'];
-    echo'<hr>';
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
+// Display table data
+$sql = "SELECT * FROM `table`";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    echo "<table border='1'>";
+    echo "<tr><th>ID</th><th>Title</th><th>Body</th><th>Date</th></tr>";
+    while($row = $result->fetch_assoc()) {
+        echo "<tr><td>{$row['ID']}</td><td>{$row['Title']}</td><td>{$row['Body']}</td><td>{$row['Date']}</td></tr>";
+    }
+    echo "</table>";
+} else {
+    echo "0 results";
+}
+
+$conn->close();
+
 ?>
